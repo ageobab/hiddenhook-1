@@ -66,14 +66,14 @@ describe LineItemsController do
       it "creates a new LineItem" do
         product = Product.first
         expect {
-          post :create, {product_id: product.id , line_item: valid_attributes}, valid_session
+          post :create, {line_item: valid_attributes, product_id: product.id}, valid_session
         }.to change(LineItem, :count).by(1)
       end
 
-      it "assigns a newly created line_item as @line_item" do
+      it "assigns a newly created line_item as line_item" do
         product = Product.first
-        post :create, {product_id: product.id, line_item: valid_attributes}, valid_session
-        assigns(:line_item).should be_a(LineItem)
+        post :create, {line_item: valid_attributes, product_id: product.id}, valid_session
+        expect(:line_item).to_not be(nil)
         assigns(:line_item).should be_persisted
       end
 
