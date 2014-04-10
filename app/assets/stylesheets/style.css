@@ -493,6 +493,20 @@ a:before, a:after {
                   transition: transform 0.5s, opacity 0.1s;
 }
 
+#instagram-button img, 
+#facebook-button img {
+    background: none;
+}
+
+#instagram-button img {
+    position:fixed;
+    top: 150px;
+}
+
+#facebook-button img {
+    position:fixed;
+    top: 275px;
+}
 
 /*------------------------------------*\
     $COPYRIGHT-WRAP
