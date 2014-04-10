@@ -243,13 +243,13 @@ a:before, a:after {
 
 /* Background images for each divider can be fitted here, for demo purposes I set all images to the same one. Change it to youre likings */
 
-.divider-bg-1 { background-image: url(../assets/bg.jpg); }
+.divider-bg-1 { background-image: url(../assets/bone.png); }
 
 .divider-bg-2 { background-image: url(../assets/bg.jpg); }
 
-.divider-bg-3 { background-image: url(../assets/bg.jpg); }
+.divider-bg-3 { background-image: url(../assets/bg.png); }
 
-.divider-bg-4 { background-image: url(../assets/bg.jpg); }
+.divider-bg-4 { background-image: url(../assets/doradojuicy.png); }
 
 .divider-bg-5 { background-image: url(../assets/bg.jpg); } /* 5 is used for footer section */
 
@@ -324,7 +324,7 @@ a:before, a:after {
 \*------------------------------------*/
 
 .header-wrap {
-    background: url(/assets/bg.jpg) no-repeat center top;
+    background: url(/assets/ghostfly.png) no-repeat center top;
     padding-top: 140px;
     margin-top: -50px;
     min-height: 750px;
@@ -493,6 +493,20 @@ a:before, a:after {
                   transition: transform 0.5s, opacity 0.1s;
 }
 
+#instagram-button img, 
+#facebook-button img {
+    background: none;
+}
+
+#instagram-button img {
+    position:fixed;
+    top: 150px;
+}
+
+#facebook-button img {
+    position:fixed;
+    top: 275px;
+}
 
 /*------------------------------------*\
     $COPYRIGHT-WRAP
