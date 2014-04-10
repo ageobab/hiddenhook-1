@@ -23,6 +23,7 @@ class ChargesController < ApplicationController
       flash[:error] = e.message
       redirect_to charges_path
     else
+      flash[:notice] = "Thank you for your order"
       redirect_to root_path
     end
   end

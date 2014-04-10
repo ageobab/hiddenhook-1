@@ -7,7 +7,7 @@ Hiddenhook::Application.routes.draw do
   resources :charges
 
   resources :products, only: [:show] do
-    resources :line_items, only: [:create, :destroy]
+    resources :line_items, only: [:create]
   end
-  resources :cart, only: [:show]
+  post '/empty_cart' => 'line_items#destroy', as: 'empty_cart'
 end

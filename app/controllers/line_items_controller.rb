@@ -8,6 +8,11 @@ class LineItemsController < PublicController
     line_item.save
     redirect_to 'http://localhost:3000/', notice: 'Added to order'
   end
+
+  def destroy
+    session[:order_id] = nil
+    redirect_to root_path
+  end
   private
   # def line_item_params
   #   params.require(:line_item).permit(:name, :price)
