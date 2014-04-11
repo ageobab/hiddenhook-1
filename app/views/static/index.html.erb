@@ -10,8 +10,10 @@
 <div class="container" id="about" name="about">
   <div class="row">
     <br>
+    <br>
     <h1 class="center"> hidden hook flies</h1>
     <hr>
+    <br>
     <br>
     <div class="col-lg-4">
       <p>Hidden Hook is your source for premium flies. Every fly that leaves our shop is spun with top-of-the-line materials and components. At Hidden Hook we take pride in each fly that leaves the vice and guarantee their flawless performance. Each fly is hand tied by Hidden Hook founder Rudy Babikian.   </p>
@@ -24,6 +26,7 @@
     </div><!-- col-lg-4 -->
   </div>
   <br>
+  <br>
 </div><!-- about section ends -->
 <!-- #1 Divider with few words/quote -->
 <section class="divider  divider-bg-1  center">
@@ -35,22 +38,23 @@
 </section><!-- #1 divider ends -->
 <% @products.each do |product| %>
 <!-- #1 Feature section starts here -->
-<div class="feature-wrap  left" id="features" name="features">
+<div class="feature-wrap  left" name="features">
   <div class="container">
     <div class="row">
-      <div class="<%= cycle('products-right','products-left')%>">
+      <div class="col-lg-6 center">
         <%= image_tag(product.image.url, class: 'img-responsive') %>
       </div>
-      <div class="col-lg-6 center">
+      <div class="col-lg-6 ">
         <h2>Dorado Deceiver</h2> <!-- Title -->
         <p>Originally designed to target Golden Dorado, the Deceiver has proven to be a successful pattern around the world.</p>
-        <div class="btn btn-primary" data-toggle="modal" data-target="#myModal<%=product.id%>">Buy Now</div>
+        <a class="btn btn-primary" data-toggle="modal" data-target="#myModal<%=product.id%>">Buy Now</a>
       </div>
     </div>
   </div>
   <br>
   <br>
 </div>
+
 <!-- modal for feature 1 starts here -->
 <div class="modal fade" id="myModal<%=product.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -77,10 +81,7 @@
   </div>
 </div>
 <% end %>
-</div>
-<br>
-<br>
-</div><!-- #3 feature section ends -->
+<!-- #3 feature section ends -->
 <!-- #3 Divider with few words/quote -->
               <!-- <section class="divider  divider-bg-3  center">
                 <div class="container">
@@ -142,8 +143,9 @@
                           </figcaption>
                         </figure>
                       </div>
-                      <div class="container">
-                        <div class="row">
+                    </div>
+                      <!-- <div class="container">
+                        <div class="row"> -->
                           <!-- #1 portfolio item -->
                                 <!--    <div class="col-md-6 ">
                                   <div class="grid  mask">
@@ -240,7 +242,7 @@
                               <div class="col-md-6">
                                 <div class="grid  mask">
                                   <figure>
-                                    <img class="img-responsive" src="app/assets/images/portfolio/portfolio-4.jpg" alt="">
+                                    <%= image_tag "portfolio/portfolio-2.jpg", class: "img-responsive"%>
                                     <figcaption>
                                       <h5>PROJECT #4</h5>
                                       <em>design, full development</em>
