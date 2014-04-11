@@ -1,52 +1,50 @@
-<!DOCTYPE html>
-  <html>
+    <!DOCTYPE html>
+    <html>
     <head>
-    <title>Hiddenhook</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
-    <meta charset="utf-8">
-    <title>Hidden Hook Fly Company</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href=""> <!-- Put path to your favicon here -->
-    <!-- Bootstrap core CSS -->
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-    <body class="animated fadeIn" data-spy="scroll" data-offset="0" data-target="#navbar-main">
-    <!-- Fixed navigation starts  -->
-  <div id="navbar-main">
-    <div class="navbar  navbar-inverse  navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon  icon-menu"></span>
-        </button>
-        <a class="navbar-brand  smoothScroll" href="#home"><span class="logo">hidden hook flies</span></a> <!-- Branding -->
-      </div>
-        <div class="navbar-collapse  collapse">
-          <ul class="nav  navbar-nav  navbar-right">
-          <li><a href="#home" class="smoothScroll">home</a></li>
-          <li><a href="#about" class="smoothScroll">about</a></li>
-          <li><a href="#features" class="smoothScroll">flies</a></li>
-          <!-- <li><a href="#team" class="smoothScroll">Team</a></li> -->
-          <li><a href="#portfolio" class="smoothScroll">hh eaters</a></li>
-          <li><a href="#contact" class="smoothScroll">contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  </div><!-- navigation ends -->
-    <%= yield %>
-     <%= render("shared/footer")%>
-     <%= javascript_include_tag('application') %>
-     <script src="https://checkout.stripe.com/checkout.js"></script>
-  </body>
+        <title>Hiddenhook</title>
+        <%= stylesheet_link_tag    "application", media: "all"%>
+        <%= csrf_meta_tags %>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href=""> <!-- Put path to your favicon here -->
+        <!-- Bootstrap core CSS -->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+            <body class="animated fadeIn" data-spy="scroll" data-offset="0" data-target="#navbar-main">
+                <!-- Fixed navigation starts  -->
+                <div id="navbar-main">
+                    <div class="navbar  navbar-inverse  navbar-fixed-top">
+                      <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon  icon-menu"></span>
+                            </button>
+                            <a class="navbar-brand  smoothScroll" href="#home"><span class="logo">hidden hook flies</span></a> <!-- Branding -->
+                        </div>
+                        <div class="navbar-collapse  collapse">
+                          <ul class="nav  navbar-nav  navbar-right">
+                              <li><a href="#home" class="smoothScroll">home</a></li>
+                              <li><a href="#about" class="smoothScroll">about</a></li>
+                              <li><a href="#features" class="smoothScroll">flies</a></li>
+                              <!-- <li><a href="#team" class="smoothScroll">Team</a></li> -->
+                              <li><a href="#portfolio" class="smoothScroll">hh eaters</a></li>
+                              <li><a href="#contact" class="smoothScroll">contact</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div><!-- navigation ends -->
+          <%= yield %>
+          <%= render("shared/footer")%>
+          <%= javascript_include_tag('application') %>
+          <script src="https://checkout.stripe.com/checkout.js"></script>
+    </body>
 </html>

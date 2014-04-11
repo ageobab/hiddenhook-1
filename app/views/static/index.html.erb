@@ -1,95 +1,95 @@
 
-  <!-- Header starts here -->
-    <div class="header-wrap  center" id="home" name="home">
-      <header class="clearfix">
-      <h1 class="animated  fadeInUp">hidden hook flies</h1>
-      <p class="animated  fadeInUp">tested and proven worldwide</p>
-    </header>
-    </div><!-- header ends -->
-    <!-- About section starts here -->
-      <div class="container" id="about" name="about">
-        <div class="row">
-        <br>
-        <h1 class="center"> hidden hook flies</h1>
-        <hr>
-        <br>
-          <div class="col-lg-4">
-          <p>Hidden Hook is your source for premium flies. Every fly that leaves our shop is spun with top-of-the-line materials and components. At Hidden Hook we take pride in each fly that leaves the vice and guarantee their flawless performance. Each fly is hand tied by Hidden Hook founder Rudy Babikian.   </p>
-          </div><!-- col-lg-4 -->
-            <div class="col-lg-4">
-            <p>Rudy was taught how to tie simple patterns when he was still shuffling around in a diaper. He was given his first tying vice when he was five years old by his father, George Babikian, an avid fly fisherman. Through his continued passion of fishing and tying, Rudy has become an accomplished tyer himself. See some of his favorite flies below.</p>
-            </div><!-- col-lg-4 -->
-              <div class="col-lg-4">
-              <p>In addition to our proven flies and colors, we offer custom flies, from small changes to a current fly or a completely new design. We thrive in our ability to adapt to changes in fish behavior, different fish species, and environments through customization. Contact us today for custom flies perfectly suited to your needs.</p>
-              </div><!-- col-lg-4 -->
-            </div>
-            <br>
-            </div><!-- about section ends -->
-            <!-- #1 Divider with few words/quote -->
-              <section class="divider  divider-bg-1  center">
-                <div class="container">
-                <h1>"These flies make me hate my wife."</h1>
-                <hr>
-                <p> - Carl "GuiltyRod" Yurbinski</p>
-              </div>
-              </section><!-- #1 divider ends -->
-              <% @products.each do |product| %>
-              <!-- #1 Feature section starts here -->
-                <div class="feature-wrap  left" id="features" name="features">
-                  <div class="container">
-                    <div class="row">
-                      <div class="<%= cycle('products-right','products-left')%>">
-                      <%= image_tag(product.image, class: 'img-responsive') %>
-                    </div>
-                      <div class="col-lg-6 center">
-                      <h2>Dorado Deceiver</h2> <!-- Title -->
-                      <p>Originally designed to target Golden Dorado, the Deceiver has proven to be a successful pattern around the world.</p>
-                      <div class="btn btn-primary" data-toggle="modal" data-target="#myModal<%=product.id%>">Buy Now</div>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <br>
-              </div>
-              <!-- modal for feature 1 starts here -->
-                <div class="modal fade" id="myModal<%=product.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title" id="myModalLabel"><%= product.name %></h4>
-                    </div>
-                      <div class="modal-body">
-                        <div class="col-lg-6  center">
-                        <%= image_tag("#{product.image}", class: 'img-responsive') %>
-                      </div>
-                    </div>
-                      <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      <%= button_to('Add to cart', product_line_items_path(product.id), class: 'btn btn-primary')%>
-                        <ul>
-                        <li class='button_1'> <input type="radio" name="sex" value="male">Red</li>
-                        <li class='button_2'> <input type="radio" name="sex" value="female">Blue</li>
-                        <li class='button_3'> <input type="radio" name="sex" value="female">Green</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% end %>
-            </div>
-            <br>
-            <br>
-            </div><!-- #3 feature section ends -->
-            <!-- #3 Divider with few words/quote -->
+<!-- Header starts here -->
+<div class="header-wrap  center" id="home" name="home">
+  <header class="clearfix">
+    <h1 class="animated  fadeInUp">hidden hook flies</h1>
+    <p class="animated  fadeInUp">tested and proven worldwide</p>
+  </header>
+</div><!-- header ends -->
+<!-- About section starts here -->
+<div class="container" id="about" name="about">
+  <div class="row">
+    <br>
+    <h1 class="center"> hidden hook flies</h1>
+    <hr>
+    <br>
+    <div class="col-lg-4">
+      <p>Hidden Hook is your source for premium flies. Every fly that leaves our shop is spun with top-of-the-line materials and components. At Hidden Hook we take pride in each fly that leaves the vice and guarantee their flawless performance. Each fly is hand tied by Hidden Hook founder Rudy Babikian.   </p>
+    </div><!-- col-lg-4 -->
+    <div class="col-lg-4">
+      <p>Rudy was taught how to tie simple patterns when he was still shuffling around in a diaper. He was given his first tying vice when he was five years old by his father, George Babikian, an avid fly fisherman. Through his continued passion of fishing and tying, Rudy has become an accomplished tyer himself. See some of his favorite flies below.</p>
+    </div><!-- col-lg-4 -->
+    <div class="col-lg-4">
+      <p>In addition to our proven flies and colors, we offer custom flies, from small changes to a current fly or a completely new design. We thrive in our ability to adapt to changes in fish behavior, different fish species, and environments through customization. Contact us today for custom flies perfectly suited to your needs.</p>
+    </div><!-- col-lg-4 -->
+  </div>
+  <br>
+</div><!-- about section ends -->
+<!-- #1 Divider with few words/quote -->
+<section class="divider  divider-bg-1  center">
+  <div class="container">
+    <h1>"These flies make me hate my wife."</h1>
+    <hr>
+    <p> - Carl "GuiltyRod" Yurbinski</p>
+  </div>
+</section><!-- #1 divider ends -->
+<% @products.each do |product| %>
+<!-- #1 Feature section starts here -->
+<div class="feature-wrap  left" id="features" name="features">
+  <div class="container">
+    <div class="row">
+      <div class="<%= cycle('products-right','products-left')%>">
+        <%= image_tag(product.image, class: 'img-responsive') %>
+      </div>
+      <div class="col-lg-6 center">
+        <h2>Dorado Deceiver</h2> <!-- Title -->
+        <p>Originally designed to target Golden Dorado, the Deceiver has proven to be a successful pattern around the world.</p>
+        <div class="btn btn-primary" data-toggle="modal" data-target="#myModal<%=product.id%>">Buy Now</div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+<!-- modal for feature 1 starts here -->
+<div class="modal fade" id="myModal<%=product.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel"><%= product.name %></h4>
+      </div>
+      <div class="modal-body">
+        <div class="col-lg-6  center">
+          <%= image_tag("#{product.image}", class: 'img-responsive') %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= button_to('Add to cart', product_line_items_path(product.id), class: 'btn btn-primary')%>
+        <ul>
+          <li class='button_1'> <input type="radio" name="sex" value="male">Red</li>
+          <li class='button_2'> <input type="radio" name="sex" value="female">Blue</li>
+          <li class='button_3'> <input type="radio" name="sex" value="female">Green</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+<br>
+<br>
+</div><!-- #3 feature section ends -->
+<!-- #3 Divider with few words/quote -->
               <!-- <section class="divider  divider-bg-3  center">
                 <div class="container">
                 <h1> "Rudy is a true gangster and a gentleman, his customer service is fantastic."</h1>
                 <hr>
                 <p> - Laurence "Crunchy" Jenkins </p>
               </div>
-              </section> --><!-- #3 divider ends -->
-              <!-- Team/staff section starts here -->
+            </section> --><!-- #3 divider ends -->
+            <!-- Team/staff section starts here -->
                 <!-- <div class="container" id="team" name="team">
                 <br>
                   <div class="row  center">
@@ -109,42 +109,42 @@
                   </div>
                 </div>
                 <br>
-                </div> --><!-- team/staff section ends -->
-                <!-- #4 Divider with few words/quote -->
-                  <section class="divider  divider-bg-4  center">
-                    <div class="container">
-                    <h1>"I caught my first fish today on one of your flies. Thank you Rudy.  Are you single?"</h1>
-                    <hr>
-                    <p>Penelope Ruíz</p>
-                  </div>
-                  </section><!-- #4 divider ends -->
-                  <!-- Portfolio section starts here -->
-                    <div class="container" id="portfolio" name="portfolio">
-                    <br>
-                      <div class="row">
-                      <br>
-                      <h1 class="center"> hidden hook eaters</h1>
-                      <hr>
-                      <br>
-                      <br>
-                    </div>
+              </div> --><!-- team/staff section ends -->
+              <!-- #4 Divider with few words/quote -->
+              <section class="divider  divider-bg-4  center">
+                <div class="container">
+                  <h1>"I caught my first fish today on one of your flies. Thank you Rudy.  Are you single?"</h1>
+                  <hr>
+                  <p>Penelope Ruíz</p>
+                </div>
+              </section><!-- #4 divider ends -->
+              <!-- Portfolio section starts here -->
+              <div class="container" id="portfolio" name="portfolio">
+                <br>
+                <div class="row">
+                  <br>
+                  <h1 class="center"> hidden hook eaters</h1>
+                  <hr>
+                  <br>
+                  <br>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <!-- #1 portfolio item -->
+                    <div class="col-md-6 ">
+                      <div class="grid  mask">
+                        <figure>
+                          <img class="img-responsive" src="app/assets/img/portfolio/portfolio-1.jpg" alt="">
+                          <figcaption>
+                            <h5>PROJECT #1</h5>
+                            <em>ui/ux design, development</em>
+                            <a data-toggle="modal" href="#myModal">DETAILS</a>
+                          </figcaption>
+                        </figure>
+                      </div>
                       <div class="container">
                         <div class="row">
-                        <!-- #1 portfolio item -->
-                          <div class="col-md-6 ">
-                            <div class="grid  mask">
-                              <figure>
-                              <img class="img-responsive" src="app/assets/img/portfolio/portfolio-1.jpg" alt="">
-                              <figcaption>
-                              <h5>PROJECT #1</h5>
-                              <em>ui/ux design, development</em>
-                              <a data-toggle="modal" href="#myModal">DETAILS</a>
-                              </figcaption>
-                            </figure>
-                          </div>
-                            <div class="container">
-                              <div class="row">
-                              <!-- #1 portfolio item -->
+                          <!-- #1 portfolio item -->
                                 <!--    <div class="col-md-6 ">
                                   <div class="grid  mask">
                                     <figure>
@@ -176,121 +176,121 @@
                               </div>  -->
                               <!-- #1 modal ends -->
                               <!-- #2 portfolio item -->
-                                <div class="col-md-6">
-                                  <div class="grid  mask">
-                                    <figure>
+                              <div class="col-md-6">
+                                <div class="grid  mask">
+                                  <figure>
                                     <img class="img-responsive" src="app/assets/images/portfolio/portfolio-2-thumb.jpg" alt="">
                                     <figcaption>
-                                    <h5>PROJECT #2</h5>
-                                    <em>ui/ux design</em>
-                                    <a data-toggle="modal" href="#myModal2">DETAILS</a>
+                                      <h5>PROJECT #2</h5>
+                                      <em>ui/ux design</em>
+                                      <a data-toggle="modal" href="#myModal2">DETAILS</a>
                                     </figcaption>
                                   </figure>
                                 </div>
                               </div>
-                              </div><!-- #2 portfolio item ends -->
-                              <!-- Modal box for #2 portfolio item -->
-                                <div class="modal  fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                  <div class="modal-dialog">
-                                    <div class="modal-content">
-                                      <div class="modal-header">
+                            </div><!-- #2 portfolio item ends -->
+                            <!-- Modal box for #2 portfolio item -->
+                            <div class="modal  fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h3 class="modal-title">Project Title #2</h3>
+                                  </div>
+                                  <div class="modal-body">
+                                    <p><img class="img-responsive" src="app/assets/images/portfolio/portfolio-2.jpg" alt=""></p>
+                                    <p>It's because i'm green isn't it! alrighty then excuse me, i'd like to ass you a few questions. hey, maybe i will give you a call sometime. your number still 911? hey, maybe i will give you a call sometime. your number still 911? it's because i'm green isn't it! kinda hot in these rhinos.</p>
+                                    <p><b><a href="http://graphicburger.com/prasastienom-psd-admin-dashboard/" class="btn btn-success">View it live</a></b></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div><!-- #2 modal ends -->
+                            <br>
+                            <!-- #3 portfolio item -->
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="grid  mask">
+                                  <figure>
+                                    <img class="img-responsive" src="app/assets/images/portfolio/portfolio-3.jpg" alt="">
+                                    <figcaption>
+                                      <h5>PROJECT #3</h5>
+                                      <em>branding, identity</em>
+                                      <a data-toggle="modal" href="#">DETAILS</a>
+                                    </figcaption>
+                                  </figure>
+                                </div>
+                              </div><!-- #3 portfolio item ends -->
+                              <!-- Modal box for #3 portfolio item -->
+                              <div class="modal  fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
                                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                      <h3 class="modal-title">Project Title #2</h3>
+                                      <h3 class="modal-title">Project Title #3</h3>
                                     </div>
-                                      <div class="modal-body">
-                                      <p><img class="img-responsive" src="app/assets/images/portfolio/portfolio-2.jpg" alt=""></p>
+                                    <div class="modal-body">
+                                      <p><img class="img-responsive" src="app/assets/images/portfolio/portfolio-3.jpg" alt=""></p>
                                       <p>It's because i'm green isn't it! alrighty then excuse me, i'd like to ass you a few questions. hey, maybe i will give you a call sometime. your number still 911? hey, maybe i will give you a call sometime. your number still 911? it's because i'm green isn't it! kinda hot in these rhinos.</p>
-                                      <p><b><a href="http://graphicburger.com/prasastienom-psd-admin-dashboard/" class="btn btn-success">View it live</a></b></p>
+                                      <p><b><a href="http://graphicburger.com/branding-identity-mock-up-vol-2/" class="btn btn-success">View it live</a></b></p>
                                     </div>
                                   </div>
                                 </div>
-                                </div><!-- #2 modal ends -->
-                                <br>
-                                <!-- #3 portfolio item -->
-                                  <div class="row">
-                                    <div class="col-md-6">
-                                      <div class="grid  mask">
-                                        <figure>
-                                        <img class="img-responsive" src="app/assets/images/portfolio/portfolio-3.jpg" alt="">
-                                        <figcaption>
-                                        <h5>PROJECT #3</h5>
-                                        <em>branding, identity</em>
-                                        <a data-toggle="modal" href="#">DETAILS</a>
-                                        </figcaption>
-                                      </figure>
+                              </div><!-- #3 modal ends -->
+                              <!-- #4 portfolio item -->
+                              <div class="col-md-6">
+                                <div class="grid  mask">
+                                  <figure>
+                                    <img class="img-responsive" src="app/assets/images/portfolio/portfolio-4.jpg" alt="">
+                                    <figcaption>
+                                      <h5>PROJECT #4</h5>
+                                      <em>design, full development</em>
+                                      <a data-toggle="modal" href="#myModal4">DETAILS</a>
+                                    </figcaption>
+                                  </figure>
+                                </div>
+                              </div><!-- #4 portfolio item ends -->
+                              <!-- Modal box for #4 portfolio item -->
+                              <div class="modal  fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                      <h3 class="modal-title">Project Title #4</h3>
                                     </div>
-                                    </div><!-- #3 portfolio item ends -->
-                                    <!-- Modal box for #3 portfolio item -->
-                                      <div class="modal  fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h3 class="modal-title">Project Title #3</h3>
-                                          </div>
-                                            <div class="modal-body">
-                                            <p><img class="img-responsive" src="app/assets/images/portfolio/portfolio-3.jpg" alt=""></p>
-                                            <p>It's because i'm green isn't it! alrighty then excuse me, i'd like to ass you a few questions. hey, maybe i will give you a call sometime. your number still 911? hey, maybe i will give you a call sometime. your number still 911? it's because i'm green isn't it! kinda hot in these rhinos.</p>
-                                            <p><b><a href="http://graphicburger.com/branding-identity-mock-up-vol-2/" class="btn btn-success">View it live</a></b></p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      </div><!-- #3 modal ends -->
-                                      <!-- #4 portfolio item -->
-                                        <div class="col-md-6">
-                                          <div class="grid  mask">
-                                            <figure>
-                                            <img class="img-responsive" src="app/assets/images/portfolio/portfolio-4.jpg" alt="">
-                                            <figcaption>
-                                            <h5>PROJECT #4</h5>
-                                            <em>design, full development</em>
-                                            <a data-toggle="modal" href="#myModal4">DETAILS</a>
-                                            </figcaption>
-                                          </figure>
-                                        </div>
-                                        </div><!-- #4 portfolio item ends -->
-                                        <!-- Modal box for #4 portfolio item -->
-                                          <div class="modal  fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                              <div class="modal-content">
-                                                <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                <h3 class="modal-title">Project Title #4</h3>
-                                              </div>
-                                                <div class="modal-body">
-                                                <p><img class="img-responsive" src="app/assets/images/portfolio/portfolio-4.jpg" alt=""></p>
-                                                <p>It's because i'm green isn't it! alrighty then excuse me, i'd like to ass you a few questions. hey, maybe i will give you a call sometime. your number still 911? hey, maybe i will give you a call sometime. your number still 911? it's because i'm green isn't it! kinda hot in these rhinos.</p>
-                                                <p><b><a href="http://graphicburger.com/identity-branding-mock-up-vol-3/" class="btn btn-success">View it live</a></b></p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          </div><!-- #4 modal ends -->
-                                        </div>
-                                        <br>
-                                        <br>
-                                      </div>
-                                      </div><!-- portfolio section ends -->
-                                        <div style='position:fixed;top:70px;left:30px;z-index0;'>
-                                        <%= form_tag charges_path do %>
-                                        <article>
-                                          <label class="amount">
-                                          <span>Amount: <%= total_cost(@order.id)  %></span>
-                                        </label>
-                                        </article>
-                                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                                        <% items(@order_id).each do |item| %>
-                                        "item"
-                                        data-description=<%= item %>
-                                        <% end %>
-                                        data-amount=<%= total_cost(@order.id) * 100 %>>
-                                        </script>
-                                        <%= hidden_field_tag 'amount', total_cost(@order.id) %>
-                                        <% end %>
-                                        <%= button_to('Empty Cart',empty_cart_path, class: 'btn btn-danger') %>
-                                          <div id="social-icons">
-                                          <%= link_to(image_tag('instagram.png', class: 'img-responsive'), 'http://instagram.com', id: 'instagram-button') %>
-                                          <%= link_to(image_tag('facebook.png', class: 'img-responsive'), 'http://facebook.com', id: 'facebook-button') %>
-                                        </div>
-                                      </div>
-                                     
+                                    <div class="modal-body">
+                                      <p><img class="img-responsive" src="app/assets/images/portfolio/portfolio-4.jpg" alt=""></p>
+                                      <p>It's because i'm green isn't it! alrighty then excuse me, i'd like to ass you a few questions. hey, maybe i will give you a call sometime. your number still 911? hey, maybe i will give you a call sometime. your number still 911? it's because i'm green isn't it! kinda hot in these rhinos.</p>
+                                      <p><b><a href="http://graphicburger.com/identity-branding-mock-up-vol-3/" class="btn btn-success">View it live</a></b></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div><!-- #4 modal ends -->
+                            </div>
+                            <br>
+                            <br>
+                          </div>
+                        </div><!-- portfolio section ends -->
+                        <div style='position:fixed;top:70px;left:30px;z-index0;'>
+                          <%= form_tag charges_path do %>
+                          <article>
+                            <label class="amount">
+                              <span>Amount: <%= total_cost(@order.id)  %></span>
+                            </label>
+                          </article>
+                          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                          <% items(@order_id).each do |item| %>
+                          "item"
+                          data-description=<%= item %>
+                          <% end %>
+                          data-amount=<%= total_cost(@order.id) * 100 %>>
+                          </script>
+                          <%= hidden_field_tag 'amount', total_cost(@order.id) %>
+                          <% end %>
+                          <%= button_to('Empty Cart',empty_cart_path, class: 'btn btn-danger') %>
+                          <div id="social-icons">
+                            <%= link_to(image_tag('instagram.png', class: 'img-responsive'), 'http://instagram.com', id: 'instagram-button') %>
+                            <%= link_to(image_tag('facebook.png', class: 'img-responsive'), 'http://facebook.com', id: 'facebook-button') %>
+                          </div>
+                        </div>
+                        
