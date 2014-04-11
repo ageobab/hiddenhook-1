@@ -39,7 +39,7 @@
   <div class="container">
     <div class="row">
       <div class="<%= cycle('products-right','products-left')%>">
-        <%= image_tag(product.image, class: 'img-responsive') %>
+        <%= image_tag(product.image.url, class: 'img-responsive') %>
       </div>
       <div class="col-lg-6 center">
         <h2>Dorado Deceiver</h2> <!-- Title -->
@@ -61,7 +61,7 @@
       </div>
       <div class="modal-body">
         <div class="col-lg-6  center">
-          <%= image_tag("#{product.image}", class: 'img-responsive') %>
+          <%= image_tag(product.image.url, class: 'img-responsive') %>
         </div>
       </div>
       <div class="modal-footer">
@@ -134,7 +134,7 @@
                     <div class="col-md-6 ">
                       <div class="grid  mask">
                         <figure>
-                          <img class="img-responsive" src="app/assets/img/portfolio/portfolio-1.jpg" alt="">
+                          <%= image_tag "portfolio/portfolio-1.jpg", class: "img-responsive" %>
                           <figcaption>
                             <h5>PROJECT #1</h5>
                             <em>ui/ux design, development</em>
@@ -179,7 +179,7 @@
                               <div class="col-md-6">
                                 <div class="grid  mask">
                                   <figure>
-                                    <img class="img-responsive" src="app/assets/images/portfolio/portfolio-2-thumb.jpg" alt="">
+                                   <%= image_tag "portfolio/portfolio-1.jpg", class: "img-responsive" %>
                                     <figcaption>
                                       <h5>PROJECT #2</h5>
                                       <em>ui/ux design</em>
@@ -198,9 +198,9 @@
                                     <h3 class="modal-title">Project Title #2</h3>
                                   </div>
                                   <div class="modal-body">
-                                    <p><img class="img-responsive" src="app/assets/images/portfolio/portfolio-2.jpg" alt=""></p>
+                                    <p><%= image_tag "portfolio/portfolio-2.jpg", class: "img-responsive"%> </p>
                                     <p>It's because i'm green isn't it! alrighty then excuse me, i'd like to ass you a few questions. hey, maybe i will give you a call sometime. your number still 911? hey, maybe i will give you a call sometime. your number still 911? it's because i'm green isn't it! kinda hot in these rhinos.</p>
-                                    <p><b><a href="http://graphicburger.com/prasastienom-psd-admin-dashboard/" class="btn btn-success">View it live</a></b></p>
+                                    
                                   </div>
                                 </div>
                               </div>
@@ -211,7 +211,7 @@
                               <div class="col-md-6">
                                 <div class="grid  mask">
                                   <figure>
-                                    <img class="img-responsive" src="app/assets/images/portfolio/portfolio-3.jpg" alt="">
+                                    <%= image_tag "portfolio/portfolio-2.jpg", class: "img-responsive"%> 
                                     <figcaption>
                                       <h5>PROJECT #3</h5>
                                       <em>branding, identity</em>
@@ -229,9 +229,9 @@
                                       <h3 class="modal-title">Project Title #3</h3>
                                     </div>
                                     <div class="modal-body">
-                                      <p><img class="img-responsive" src="app/assets/images/portfolio/portfolio-3.jpg" alt=""></p>
+                                      <p><%= image_tag "portfolio/portfolio-2.jpg", class: "img-responsive"%> </p>
                                       <p>It's because i'm green isn't it! alrighty then excuse me, i'd like to ass you a few questions. hey, maybe i will give you a call sometime. your number still 911? hey, maybe i will give you a call sometime. your number still 911? it's because i'm green isn't it! kinda hot in these rhinos.</p>
-                                      <p><b><a href="http://graphicburger.com/branding-identity-mock-up-vol-2/" class="btn btn-success">View it live</a></b></p>
+                                      
                                     </div>
                                   </div>
                                 </div>
@@ -258,9 +258,9 @@
                                       <h3 class="modal-title">Project Title #4</h3>
                                     </div>
                                     <div class="modal-body">
-                                      <p><img class="img-responsive" src="app/assets/images/portfolio/portfolio-4.jpg" alt=""></p>
+                                      <p><%= image_tag "portfolio/portfolio-2.jpg", class: "img-responsive"%> </p>
                                       <p>It's because i'm green isn't it! alrighty then excuse me, i'd like to ass you a few questions. hey, maybe i will give you a call sometime. your number still 911? hey, maybe i will give you a call sometime. your number still 911? it's because i'm green isn't it! kinda hot in these rhinos.</p>
-                                      <p><b><a href="http://graphicburger.com/identity-branding-mock-up-vol-3/" class="btn btn-success">View it live</a></b></p>
+                                      
                                     </div>
                                   </div>
                                 </div>
