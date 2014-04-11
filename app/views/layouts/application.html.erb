@@ -21,8 +21,32 @@
     <![endif]-->
   </head>
     <body class="animated fadeIn" data-spy="scroll" data-offset="0" data-target="#navbar-main">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <!-- Fixed navigation starts  -->
+  <div id="navbar-main">
+    <div class="navbar  navbar-inverse  navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon  icon-menu"></span>
+        </button>
+        <a class="navbar-brand  smoothScroll" href="#home"><span class="logo">hidden hook flies</span></a> <!-- Branding -->
+      </div>
+        <div class="navbar-collapse  collapse">
+          <ul class="nav  navbar-nav  navbar-right">
+          <li><a href="#home" class="smoothScroll">home</a></li>
+          <li><a href="#about" class="smoothScroll">about</a></li>
+          <li><a href="#features" class="smoothScroll">flies</a></li>
+          <!-- <li><a href="#team" class="smoothScroll">Team</a></li> -->
+          <li><a href="#portfolio" class="smoothScroll">hh eaters</a></li>
+          <li><a href="#contact" class="smoothScroll">contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div><!-- navigation ends -->
     <%= yield %>
+     <%= render("shared/footer")%>
+     <%= javascript_include_tag('application') %>
+     <script src="https://checkout.stripe.com/checkout.js"></script>
   </body>
 </html>
