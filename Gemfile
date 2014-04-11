@@ -13,6 +13,7 @@ gem 'devise'
 gem 'rails_admin'
 gem 'carrierwave'
 gem "mini_magick"
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -20,6 +21,11 @@ group :doc do
 end
 
 group :developemt, :test do
-  gem 'rspec-rails'
+ gem 'rspec-rails'
 end
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'rails_best_practices'
+end

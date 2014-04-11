@@ -1,48 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Hiddenhook</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-   <meta charset="utf-8">
-        <title>Hidden Hook Fly Company</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        
-        <link rel="shortcut icon" href=""> <!-- Put path to your favicon here -->
-      
-        <!-- Bootstrap core CSS -->
-        <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-
-        <!-- Custom theme styles -->
-        <link href="assets/stylesheets/style.css" rel="stylesheet" type="text/css"> <!-- Default theme CSS -->
-        <link href="assets/stylesheets/icomoon.css" rel="stylesheet" type="text/css"> <!-- Custom icons -->
-        <link href="assets/stylesheets/animate.css" rel="stylesheet" type="text/css"> <!-- For sweet water CSS animations -->
-        
-        <!-- Google web fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'> <!-- Raleway -->
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'> <!-- Lato; could be changed to Open Sans -->
-        
-        <!-- Scripts -->
-        <script src="assets/javascripts/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/javascripts/modernizr.custom.js"></script>
-    
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-</head>
-<body class="animated fadeIn" data-spy="scroll" data-offset="0" data-target="#navbar-main">
-
+  <html>
+    <head>
+    <title>Hiddenhook</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <title>Hidden Hook Fly Company</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href=""> <!-- Put path to your favicon here -->
+    <!-- Bootstrap core CSS -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+    <body class="animated fadeIn" data-spy="scroll" data-offset="0" data-target="#navbar-main">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-<%= yield %>
-
-</body>
+    <%= yield %>
+  </body>
 </html>
