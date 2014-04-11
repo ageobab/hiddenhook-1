@@ -4,6 +4,4 @@ class ProductsController < PublicController
     @product = Product.find(params[:id])
     @line_item = LineItem.new
   end
-
-
 end

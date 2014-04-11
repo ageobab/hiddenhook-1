@@ -3,7 +3,7 @@ module StaticHelper
     total = 0
     @order = Order.find(order_id)
     @order.line_items.each do |item|
-      total += item.price
+      total += (item.price * item.quantity)
     end
     total
   end
