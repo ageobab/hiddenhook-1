@@ -1,0 +1,30 @@
+<!-- Fixed navigation starts  -->
+<div id="navbar-main">
+  <div class="navbar  navbar-inverse  navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon  icon-menu"></span>
+        </button>
+        <a class="navbar-brand  smoothScroll" href="#home"><span class="logo">hidden hook flies</span></a> <!-- Branding -->
+      </div>
+      <div class="navbar-collapse  collapse">
+        <ul class="nav  navbar-nav  navbar-right">
+          <li><a href="#home" class="smoothScroll">home</a></li>
+          <li><a href="#about" class="smoothScroll">about</a></li>
+          <li><a href="#features" class="smoothScroll">flies</a></li>
+          <!-- <li><a href="#team" class="smoothScroll">Team</a></li> -->
+          <li><a href="#portfolio" class="smoothScroll">hh eaters</a></li>
+          <li><a href="#contact" class="smoothScroll">contact</a></li>
+          <% if @order.line_items.count > 0 %>
+          <li>
+            <a href="#myModal" id='cart-button' class="smoothScroll" data-target="#myModal" data-toggle="modal" style="text-decoration:underline">
+              my cart: <%= pluralize(@order.line_items.count, 'fly') %> 
+            </a>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div><!-- navigation ends -->
