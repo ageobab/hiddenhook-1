@@ -23,31 +23,42 @@
   <!-- modal for feature 1 starts here -->
   <div class="modal fade" id="myModal<%=product.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel"><%= product.name %></h4>
-        </div>
-        <div class="modal-body clearfix">
-          <div class="col-lg-6  center">
-            <%= image_tag(product.image.url, class: 'img-responsive') %>
+      <%= form_tag(product_line_items_path(product)) do %>
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel"><%= product.name %></h4>
           </div>
-          <div class="col-lg-6 center">
-            <ul>
-              <% product.colors.each do |option| %>
-                <li> <input type="radio" value="<%= option.color %>"><%= option.color %></li>
-              <% end %>
-          </ul>
+          <div class="modal-body clearfix">
+            <div class="col-lg-6  center">
+              <%= image_tag(product.image.url, class: 'img-responsive') %>
+            </div>
+            <div class="col-lg-6 center">
+              <ul>
+                <% product.colors.each do |option| %>
+                  <li>
+                    <label>
+                      <%= radio_button_tag('colors', option.color, false, id: nil) %>
+                      <%= option.color %>
+                    </label>
+                  </li>
+                <% end %>
+              </ul>
+              <div class="col-xs-2">
+                <label>Qty.</label>
+                <%= text_field_tag(:quantity, 1, class: 'form-control', id: nil) %>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <div class="btn-toolbar pull-right">
-            <div class="btn-group btn-group-sm">
-              <%= link_to('Add To Cart', product_line_items_path(product.id), class: 'btn btn-primary') %>
+          <div class="modal-footer">
+            <div class="btn-toolbar pull-right">
+              <div class="btn-group btn-group-sm">
+                <%= submit_tag('Add To Cart', class: 'btn btn-primary') %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
 <% end %>

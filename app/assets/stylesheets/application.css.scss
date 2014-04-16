@@ -1,6 +1,12 @@
 @import "http://fonts.googleapis.com/css?family=Raleway:400,300,700";
+@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
 @import "bootstrap";
 @import "style";
 @import "icomoon";
 @import "animate";
 @import "static";
+
+#cart-button {
+  text-decoration:none;
+  margin-top: -7px;
+  }

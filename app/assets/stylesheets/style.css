@@ -243,7 +243,7 @@ a:before, a:after {
 
 /* Background images for each divider can be fitted here, for demo purposes I set all images to the same one. Change it to youre likings */
 
-.divider-bg-1 { background-image: url(../assets/bone.png); }
+.divider-bg-1 { background-image: url(../assets/bonerexplode.png); }
 
 .divider-bg-2 { background-image: url(../assets/bg.jpg); }
 
@@ -330,7 +330,7 @@ a:before, a:after {
 \*------------------------------------*/
 
 .header-wrap {
-    background: url(/assets/ghostfly.png) no-repeat center top;
+    background: url(/assets/grill.png) no-repeat center top;
     padding-top: 140px;
     margin-top: -50px;
     min-height: 750px;
@@ -508,12 +508,14 @@ a:before, a:after {
     position:fixed;
     top: 200px;
     width: 70px;
+    margin-left: 14px;
 }
 
 #facebook-button img {
     position:fixed;
     top: 275px;
     width: 70px;
+    margin-left: 14px;
 }
 
 /*------------------------------------*\

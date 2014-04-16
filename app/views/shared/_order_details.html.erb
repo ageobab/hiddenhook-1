@@ -1,0 +1,20 @@
+
+<div style='display: none;'>
+  <%= form_tag charges_path do %>
+  <article>
+    <label class="amount">
+      <span>Cart: <%= @order.line_items.count  %> items</span>
+    </label>
+  </article>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+  <% items(@order_id).each do |item| %>
+  "item"
+  data-description=<%= item %>
+  <% end %>
+  data-amount=<%= total_cost(@order.id) * 100 %>>
+  </script>
+  <%= hidden_field_tag 'amount', total_cost(@order.id) %>
+  <% end %>
+  <%= button_to('Empty Cart',empty_cart_path, class: 'btn btn-danger') %>
+
+</div>
