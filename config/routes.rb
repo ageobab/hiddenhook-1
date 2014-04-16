@@ -1,6 +1,7 @@
 Hiddenhook::Application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/portal', as: 'rails_admin'
+
   devise_for :users, skip: [:registrations]
 
   root to: "static#index"
