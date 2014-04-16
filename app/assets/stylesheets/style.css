@@ -249,9 +249,11 @@ a:before, a:after {
 
 .divider-bg-3 { background-image: url(../assets/bg.png); }
 
-.divider-bg-4 { background-image: url(../assets/doradojuicy.png); }
+.divider-bg-4 { background-image: url(../assets/youngin.png); }
 
-.divider-bg-5 { background-image: url(../assets/teeg.png); } /* 5 is used for footer section */
+.divider-bg-5 { background-image: url(../assets/youngin.png);
+    height: 800px;
+} /* 5 is used for footer section */
 
 
 
@@ -523,13 +525,13 @@ a:before, a:after {
 \*------------------------------------*/
 
 .copyright {
-  background-color: #2c3e50;
+  background-color: white;
     padding: 25px 0 20px 0;
     margin-top: 0;
 }
 
     .copyright h5 {
-        color: #f4f4f4;
+        color: white;
     }
 
 
