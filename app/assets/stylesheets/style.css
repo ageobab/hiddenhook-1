@@ -44,7 +44,7 @@ body {
 }
 
 body {
-    font-family: "Lato";
+    font-family: sans-serif;
     line-height: 1.3;
     font-weight: 300;
     font-size: 16px;
@@ -108,7 +108,7 @@ textarea {
 \*------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
     font-weight: 300;
     color: #3b3b3b;
 }
@@ -262,6 +262,11 @@ a:before, a:after {
 .logo {
     font-size: 22px;
     color: #34495e;
+    background: none;
+    height: 55px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    width: 200px;
 }
 
 .icon-menu {
@@ -311,6 +316,7 @@ a:before, a:after {
 
 .navbar-fixed-top {
     border-width: 0 0 0;
+    height: 90px;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -500,12 +506,14 @@ a:before, a:after {
 
 #instagram-button img {
     position:fixed;
-    top: 150px;
+    top: 200px;
+    width: 70px;
 }
 
 #facebook-button img {
     position:fixed;
     top: 275px;
+    width: 70px;
 }
 
 /*------------------------------------*\
