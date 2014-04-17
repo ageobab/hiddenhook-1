@@ -19,6 +19,7 @@
           <li class="<%= cycle('odd', 'even') %>">
             <%= item.name %>
             <span class="pull-right">
+              <small><%= item.quantity %> x </small>
               <%= number_to_currency(item.price) %>
             </span>
           </li>

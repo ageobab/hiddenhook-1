@@ -19,8 +19,8 @@
           <li>
             <a href="#cartModal" id='cart-button' data-target="#cartModal" data-toggle="modal">
               <i class="fa fa-shopping-cart fa-2x"></i>
-              <% if @order.line_items.count > 0 %>
-                <%= pluralize(@order.line_items.count, 'fly') %>
+              <% if @order.line_items.any? %>
+                <%= pluralize(@order.line_items.sum(:quantity), 'fly') %>
               <% end %>
             </a>
           </li>
