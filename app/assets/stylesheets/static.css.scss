@@ -5,3 +5,32 @@
 .right {
   float: right;
 }
+#cartModal {
+  .modal-title {
+    font-family: 'helvetica neue';
+    font-size: 30px;
+  }
+  .modal-body {
+    padding-bottom: 0px;
+    ul {
+      list-style: none;
+      li {
+        font-size: 20px;
+        font-weight: normal;
+        padding: 8px;
+      }
+      .odd {
+        background: #eee;
+      }
+    }
+    #cart-total {
+      margin-left: 40px;
+      font-size: 30px;
+      padding-top: 10px;
+      border-top: 1px solid #aaa;
+    }
+  }
+  .modal-footer {
+    margin-top: 0px;
+  }
+}
