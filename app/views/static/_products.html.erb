@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="<%= cycle('left', 'right', name: 'image-rotator') %> col-lg-6 center">
-          <%= image_tag(product.image.url, class: 'img-responsive') %>
+          <%= image_tag(product.image.url, class: 'img-responsive', style: 'margin-bottom:10px;') %>
         </div>
         <div class="col-lg-6 ">
           <h2><%= product.name %></h2> <!-- Title -->
