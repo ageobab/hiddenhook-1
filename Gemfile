@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'rails_admin'
+gem 'rails_12factor', group: :production
 gem 'carrierwave'
 gem "mini_magick"
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
