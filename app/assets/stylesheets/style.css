@@ -212,6 +212,7 @@ a:before, a:after {
     width: 100%;
     padding: 35px 0 70px 0;
     max-height: 500px;
+    min-height: 300px;
     display: table;
     background-position: center center;
     background-attachment: fixed;
@@ -220,11 +221,11 @@ a:before, a:after {
     -webkit-background-size: 100%;
        -moz-background-size: 100%;
             background-size: 100%;
-    
+
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-    
+
     -webkit-background-size: cover;
        -moz-background-size: cover;
             background-size: cover;
@@ -337,7 +338,7 @@ a:before, a:after {
     margin-top: -50px;
     min-height: 750px;
     width: 100%;
-    
+
     -webkit-background-size: 100%;
        -moz-background-size: 100%;
             background-size: 100%;
@@ -469,12 +470,12 @@ a:before, a:after {
   top: auto;
   bottom: 0;
   opacity: 0;
-    
+
   -webkit-transform: translateY(100%);
      -moz-transform: translateY(100%);
       -ms-transform: translateY(100%);
           transform: translateY(100%);
-    
+
   -webkit-transition: -webkit-transform 0.5s, opacity 0.1s 0.3s;
         -moz-transition: -moz-transform 0.5s, opacity 0.1s 0.3s;
                   transition: transform 0.5s, opacity 0.1s 0.3s;
@@ -490,18 +491,18 @@ a:before, a:after {
 .no-touch .mask figure:hover figcaption,
 .mask figure.cs-hover figcaption {
   opacity: 1;
-    
+
   -webkit-transform: translateY(0px);
      -moz-transform: translateY(0px);
       -ms-transform: translateY(0px);
           transform: translateY(0px);
-    
+
   -webkit-transition: -webkit-transform 0.5s, opacity 0.1s;
         -moz-transition: -moz-transform 0.5s, opacity 0.1s;
                   transition: transform 0.5s, opacity 0.1s;
 }
 
-#instagram-button img, 
+#instagram-button img,
 #facebook-button img {
     background: none;
 }
@@ -549,7 +550,7 @@ a:before, a:after {
 
 @media screen and (max-width:769px) {
   .header-wrap h1 { font-size: 72px; }
-    
+
   .header-wrap p {
     font-size: 32px;
     line-height: 34px;
