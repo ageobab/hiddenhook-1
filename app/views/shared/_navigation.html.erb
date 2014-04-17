@@ -13,11 +13,11 @@
         <ul class="nav  navbar-nav  navbar-right">
           <li><a href="#home" class="smoothScroll">home</a></li>
           <li><a href="#about" class="smoothScroll">about</a></li>
-          <li><a href="#features" class="smoothScroll">flies</a></li>
+          <li><a href="#flies" class="smoothScroll">flies</a></li>
           <li><a href="#portfolio" class="smoothScroll">hh eaters</a></li>
           <li><a href="#contact" class="smoothScroll">contact</a></li>
           <li>
-            <a href="#cartModal" id='cart-button' class="smoothScroll" data-target="#cartModal" data-toggle="modal">
+            <a href="#cartModal" id='cart-button' data-target="#cartModal" data-toggle="modal">
               <i class="fa fa-shopping-cart fa-2x"></i>
               <% if @order.line_items.count > 0 %>
                 <%= pluralize(@order.line_items.count, 'fly') %>
