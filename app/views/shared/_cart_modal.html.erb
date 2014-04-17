@@ -4,16 +4,29 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">My Cart: <%= pluralize(@order.line_items.count, 'fly') %></h4>
+        <h4 class="modal-title" id="myModalLabel">My Cart:
+          <% unless @order.empty? %>
+          <%= pluralize(@order.line_items.count, 'fly') %>
+          <% end %>
+        </h4>
       </div>
       <div class="modal-body">
+        <% if @order.empty? %>
+        <h2>Your Cart Is Empty.</h2>
+        <% else %>
         <ul>
           <% @order.line_items.each do |item| %>
-            <li><%= item.name %><span class="pull-right"><%= number_to_currency(item.price) %></span></li>
+          <li>
+            <%= item.name %>
+            <span class="pull-right">
+              <%= number_to_currency(item.price) %>
+            </span>
+          </li>
           <% end %>
         </ul>
         <hr>
         <p>Total: <span class="pull-right"><%= number_to_currency(@order.total) %></span></p>
+        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

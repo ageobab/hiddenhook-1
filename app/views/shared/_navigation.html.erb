@@ -16,18 +16,22 @@
           <li><a href="#features" class="smoothScroll">flies</a></li>
           <li><a href="#portfolio" class="smoothScroll">hh eaters</a></li>
           <li><a href="#contact" class="smoothScroll">contact</a></li>
-          <% if @order.line_items.count > 0 %>
           <li>
             <a href="#myModal" id='cart-button' class="smoothScroll" data-target="#myModal" data-toggle="modal">
-              <i class="fa fa-shopping-cart fa-2x"></i> <%= pluralize(@order.line_items.count, 'fly') %> 
+              <i class="fa fa-shopping-cart fa-2x"></i>
+              <% if @order.line_items.count > 0 %>
+                <%= pluralize(@order.line_items.count, 'fly') %>
+              <% end %>
             </a>
           </li>
-          <% end %>
         </ul>
       </div>
     </div>
   </div>
-</div><!-- navigation ends -->
+</div>
+<!-- navigation ends -->
+
+<!-- Social Media Icons -->
 <div id="social-icons">
   <%= link_to(image_tag('instagram.png', class: 'img-responsive'), 'http://instagram.com/hiddenhook', target: "_blank", id: 'instagram-button') %>
   <%= link_to(image_tag('facebook.png', class: 'img-responsive'), 'https://www.facebook.com/pages/Hidden-Hook/476768435722961', target: "_blank", id: 'facebook-button') %>
