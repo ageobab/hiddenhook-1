@@ -244,15 +244,15 @@ a:before, a:after {
 
 /* Background images for each divider can be fitted here, for demo purposes I set all images to the same one. Change it to youre likings */
 
-.divider-bg-1 { background-image: image-url('bonerexplode.png'); }
+.divider-bg-1 { background-image: asset-url('bonerexplode.png'); }
 
-.divider-bg-2 { background-image: image-url('bg.jpg'); }
+.divider-bg-2 { background-image: asset-url('bg.jpg'); }
 
-.divider-bg-3 { background-image: image-url('bg.png'); }
+.divider-bg-3 { background-image: asset-url('bg.png'); }
 
-.divider-bg-4 { background-image: image-url('dorjump.png'); }
+.divider-bg-4 { background-image: asset-url('dorjump.png'); }
 
-.divider-bg-5 { background-image: image-url('youngin.png');
+.divider-bg-5 { background-image: asset-url('youngin.png');
     height: 800px;
 } /* 5 is used for footer section */
 
@@ -333,7 +333,7 @@ a:before, a:after {
 \*------------------------------------*/
 
 .header-wrap {
-    background: image-url('grill.png') no-repeat center top;
+    background: asset-url('grill.png') no-repeat center top;
     padding-top: 140px;
     margin-top: -50px;
     min-height: 750px;
