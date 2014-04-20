@@ -14,6 +14,7 @@ gem 'rails_admin'
 gem 'rails_12factor', group: :production
 gem 'carrierwave'
 gem "mini_magick"
+gem 'fog'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :doc do
@@ -24,6 +25,7 @@ end
 group :developemt, :test do
  gem 'rspec-rails'
  gem 'faker'
+ gem 'pry'
 end
 
 group :development do
